@@ -45,13 +45,13 @@ function findAllOccurrences(text, searchText) {
 
   while (index !== -1) {
     occurrences.push(index);
-    index = text.indexOf(searchText, index + 1);
+    index = text.indexOf(searchText1, index + 1);
   }
   console.log(index);
   return occurrences;
 }
 
-console.log(findAllOccurrences(str2, "ни"));
+console.log(findAllOccurrences(str2, "ни")); //(5) [0, 11, 21, 32, 45] -возвращает массив индексов всех вхождений в строке.
 
 //Задача 3
 //Проверка наличия всех символов строки в другой строке
@@ -134,15 +134,38 @@ console.log(filterMessage(userCorrectMessage)); // 'Эй ты, Чел!'
 //Нахождение минимального и максимального слова в массиве с учетом локали
 
 let textArray = ["Привет", "Hello", "word", "дом", "javascript"];
-function findMinWord(array) {}
-function findMaxWord(array) {
-  let maxWord = 0;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].length > maxWord) {
-      maxWord = array[i].length;
+// function findMinWord(array) {}
+// function findMaxWord(array) {
+//   let maxWord = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i].length > maxWord) {
+//       maxWord = array[i].length;
+//     }
+//   }
+//   return maxWord;
+// }
+
+// console.log(findMaxWord(textArray));
+
+function findMaxWord2(arr) {
+  let maxWord = "";
+  for (let word of arr) {
+    if (word.localeCompare(maxWord) == 1) {
+      maxWord = word;
     }
   }
   return maxWord;
 }
 
-console.log(findMaxWord(textArray));
+console.log(findMaxWord2(textArray));
+
+// ___________________________________________________
+
+let str01 = "Nfhrysl";
+let str02 = "мвеВапр";
+let str03 = "мвеВапр";
+
+str01.localeCompare(str02);
+console.log(str01.localeCompare(str02)); //1
+console.log(str02.localeCompare(str01)); //-1
+console.log(str02.localeCompare(str03)); //0
