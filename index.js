@@ -181,7 +181,6 @@ addTextBtn.addEventListener("click", function (e) {
   result.innerHTML = data;
 });
 
-
 //Методы чисел
 
 // toString приводит массив к строке
@@ -190,167 +189,167 @@ addTextBtn.addEventListener("click", function (e) {
 //
 
 let num = 5.12345;
-console.log(num.toString())
+console.log(num.toString());
 
-let arr = [1,2,3,4]
-arr.toString()
-console.log(arr.toString())
+let arr = [1, 2, 3, 4];
+arr.toString();
+console.log(arr.toString());
 
-console.log(5.. toString());
+console.log((5).toString());
 console.log(Math.floor(5.1));
 
-console.group('Math.floor');
+console.group("Math.floor");
 console.log(window.Math);
 console.log(window.Math.floor(5.1));
-console.log(window.Math.floor(-5.1));//-6
-console.log(window.Math.floor(5.9));//5
+console.log(window.Math.floor(-5.1)); //-6
+console.log(window.Math.floor(5.9)); //5
 console.groupEnd();
 
 // flor -округляет в меньшую сторону
 
-// ceil - 
+// ceil -
 
-console.log(window.Math.ceil(-5.1));//-5
-console.log(window.Math.ceil(-5.9));//-5
-console.log(window.Math.ceil(5.1));//6
-console.log(window.Math.ceil(5.9));//6
+console.log(window.Math.ceil(-5.1)); //-5
+console.log(window.Math.ceil(-5.9)); //-5
+console.log(window.Math.ceil(5.1)); //6
+console.log(window.Math.ceil(5.9)); //6
 
 //round -до ближайшего целого
-console.group('Math.round');
-console.log(window.Math.round(-5.1));//-5
-console.log(window.Math.round(-5.9));//-6
-console.log(window.Math.round(-5.5));//-5
-console.log(window.Math.round(5.1));//6
-console.log(window.Math.round(5.5));//6
-console.log(window.Math.round(5.9));//6
+console.group("Math.round");
+console.log(window.Math.round(-5.1)); //-5
+console.log(window.Math.round(-5.9)); //-6
+console.log(window.Math.round(-5.5)); //-5
+console.log(window.Math.round(5.1)); //6
+console.log(window.Math.round(5.5)); //6
+console.log(window.Math.round(5.9)); //6
 console.groupEnd();
 
 //trunc -удаляет дроби без округления
-console.group('Math.trunc');
-console.log(window.Math.trunc(-5.1));//-5
-console.log(window.Math.trunc(-5.9));//-6
-console.log(window.Math.round(-5.5));//-5
-console.log(window.Math.round(5.1));//6
-console.log(window.Math.round(5.5));//6
-console.log(window.Math.round(5.9));//6
+console.group("Math.trunc");
+console.log(window.Math.trunc(-5.1)); //-5
+console.log(window.Math.trunc(-5.9)); //-6
+console.log(window.Math.round(-5.5)); //-5
+console.log(window.Math.round(5.1)); //6
+console.log(window.Math.round(5.5)); //6
+console.log(window.Math.round(5.9)); //6
 console.groupEnd();
 
 // number.toFixed(n) от 0 до 20
 //фиксирует количество знаков после
 
-console.log(num.toFixed())
-console.log(num.toFixed(0))
-console.log(num.toFixed(1))
-console.log(num.toFixed(5))
+console.log(num.toFixed());
+console.log(num.toFixed(0));
+console.log(num.toFixed(1));
+console.log(num.toFixed(5));
 // console.log(num.toFixed(-1)) ranggeError
 
-//64-битный формат используется 
-console.log(5..toString (2))//101 - 3 бита
+//64-битный формат используется
+console.log((5).toString(2)); //101 - 3 бита
 
 //неточные вычисления
 let num1 = 0.1;
 let num2 = 0.2; // компьютер делит на бесконечность
-console.log(num1+num2)//0.30000000000000004, погрешность, если значение переваливает за 64 бита, то он
-//потеря точности связано с системой хранения 
+console.log(num1 + num2); //0.30000000000000004, погрешность, если значение переваливает за 64 бита, то он
+//потеря точности связано с системой хранения
 //чтобы не привышать это значение (64 бита), то движок округляет
 //0.1 + 0.2 ===0.3 - false
 // (0.1 + 0.2).toFixed(1) === 0.3.toFixed(1)//true
 
 //isNaN
-console.group('isNaN');
+console.group("isNaN");
 console.log(isNaN(123)); // false, т к 123- число
-console.log(isNaN('123')); // false, 
-console.log(isNaN('hello')); // true, 
-console.log(isNaN('123hello')); // true, 
-console.log(isNaN('')); // false, пустую строку можно преобразовать в число
-console.log(isNaN(false)); // false, 
-console.log(isNaN(true)); // false, 
-console.log(isNaN(null)); // false, 
-console.log(isNaN(NaN)); // true, 
-console.log(isNaN(undefined)); // true, 
-console.log(isNaN([123])); // fulse, 
-console.log(isNaN(['123'])); // fulse/ преобразует к число, 
-console.log(isNaN([1,2])); // true/ преобразует к NaN, так как не воспринимает запятую
+console.log(isNaN("123")); // false,
+console.log(isNaN("hello")); // true,
+console.log(isNaN("123hello")); // true,
+console.log(isNaN("")); // false, пустую строку можно преобразовать в число
+console.log(isNaN(false)); // false,
+console.log(isNaN(true)); // false,
+console.log(isNaN(null)); // false,
+console.log(isNaN(NaN)); // true,
+console.log(isNaN(undefined)); // true,
+console.log(isNaN([123])); // fulse,
+console.log(isNaN(["123"])); // fulse/ преобразует к число,
+console.log(isNaN([1, 2])); // true/ преобразует к NaN, так как не воспринимает запятую
 console.groupEnd();
 
 //isFinite
-console.group('isFinite');
+console.group("isFinite");
 console.log(isFinite(123)); // false
-console.log(isFinite('123')); // false 
-console.log(isFinite('123.12331')); // false, 
-console.log(isFinite('123,12331')); // false, 
-console.log(isFinite('hello')); // true, 
-console.log(isFinite('123hello')); // false, 
-console.log(isFinite('')); //  true
-console.log(isFinite(false)); // true, 
-console.log(isNaN(true)); // true, 
-console.log(isNaN(null)); // false, 
-console.log(isNaN(NaN)); // false, 
-console.log(isNaN(NaN)); // false, 
-console.log(isNaN(undefined)); // false, 
-console.log(isNaN([123])); // true, 
-console.log(isNaN(['123'])); // true/ преобразует к число, 
-console.log(isNaN([1,2])); // false/ преобразует к NaN, так как не воспринимает запятую
+console.log(isFinite("123")); // false
+console.log(isFinite("123.12331")); // false,
+console.log(isFinite("123,12331")); // false,
+console.log(isFinite("hello")); // true,
+console.log(isFinite("123hello")); // false,
+console.log(isFinite("")); //  true
+console.log(isFinite(false)); // true,
+console.log(isNaN(true)); // true,
+console.log(isNaN(null)); // false,
+console.log(isNaN(NaN)); // false,
+console.log(isNaN(NaN)); // false,
+console.log(isNaN(undefined)); // false,
+console.log(isNaN([123])); // true,
+console.log(isNaN(["123"])); // true/ преобразует к число,
+console.log(isNaN([1, 2])); // false/ преобразует к NaN, так как не воспринимает запятую
 console.groupEnd();
 
 //Object.is сравнивает значения, NaN не равно NaN
 //window.Object.is
 
-console.group('Object.is');
-Object.is(NaN, NaN);// true
-Object.is(-0, 0)// false
-Object.is('Root', 'ROOT')// false
-Object.is('Root', 'Root')// true
+console.group("Object.is");
+Object.is(NaN, NaN); // true
+Object.is(-0, 0); // false
+Object.is("Root", "ROOT"); // false
+Object.is("Root", "Root"); // true
 
 console.groupEnd();
 // parsInt parseFloat
-console.group('parsInt');
-console.log(parseInt('12d')) //123
-console.log(parseInt('12d3vvvvv')) //12
-console.log(parseInt('n12d3vvvvv')) //NaN
-console.log(parseInt(['123'])); //123
-console.log(parseInt(['123hello'])); //123
-console.log(parseInt(['123hello' , 'hello'])); //123
-console.log(parseInt('32.333')); //32
-console.log(parseInt('.233')); //NaN
-console.log(parseInt('false')); //NaN
+console.group("parsInt");
+console.log(parseInt("12d")); //123
+console.log(parseInt("12d3vvvvv")); //12
+console.log(parseInt("n12d3vvvvv")); //NaN
+console.log(parseInt(["123"])); //123
+console.log(parseInt(["123hello"])); //123
+console.log(parseInt(["123hello", "hello"])); //123
+console.log(parseInt("32.333")); //32
+console.log(parseInt(".233")); //NaN
+console.log(parseInt("false")); //NaN
 console.log(parseInt(false)); //NaN
 console.log(parseInt(true)); //NaN
-console.log(parseInt('')); //NaN
+console.log(parseInt("")); //NaN
 console.log(parseInt(null)); //NaN
 
 console.groupEnd();
-console.group('parseFloat');
-console.log(parseFloat('12d')) //123
-console.log(parseFloat('12d3vvvvv')) //12
-console.log(parseFloat('n12d3vvvvv')) //NaN
-console.log(parseFloat(['123'])); //123
-console.log(parseFloat(['123hello'])); //123
-console.log(parseFloat(['123hello' , 'hello'])); //123
-console.log(parseFloat('32.333')); //32
-console.log(parseFloat('.233')); //0.233
-console.log(parseFloat('false')); //NaN
+console.group("parseFloat");
+console.log(parseFloat("12d")); //123
+console.log(parseFloat("12d3vvvvv")); //12
+console.log(parseFloat("n12d3vvvvv")); //NaN
+console.log(parseFloat(["123"])); //123
+console.log(parseFloat(["123hello"])); //123
+console.log(parseFloat(["123hello", "hello"])); //123
+console.log(parseFloat("32.333")); //32
+console.log(parseFloat(".233")); //0.233
+console.log(parseFloat("false")); //NaN
 console.log(parseFloat(false)); //NaN
 console.log(parseFloat(true)); //NaN
-console.log(parseFloat('')); //NaN
+console.log(parseFloat("")); //NaN
 console.log(parseFloat(null)); //NaN
 
 console.groupEnd();
 
 //Math.max()
 
-console.group('Math.max()');
-console.log(Math.max(3,5,8,9,-1))
-console.log(Math.max(NaN,5,8,9,-1))//NaN
-console.log(Math.max(3,5,8,9,-1, 'hello'))//NaN
-console.log(Math.max(3,5,8,9,-1,200, true, false, null))//200
+console.group("Math.max()");
+console.log(Math.max(3, 5, 8, 9, -1));
+console.log(Math.max(NaN, 5, 8, 9, -1)); //NaN
+console.log(Math.max(3, 5, 8, 9, -1, "hello")); //NaN
+console.log(Math.max(3, 5, 8, 9, -1, 200, true, false, null)); //200
 console.groupEnd();
 
-console.group('Math.min()');
-console.log(Math.max(3,5,8,9,-1))//-1
-console.log(Math.max(NaN,5,8,9,-1))//NaN
-console.log(Math.max(3,5,8,9,-1, 'hello'))//NaN
-console.log(Math.max(3,5,8,9,-1,200, true, false, null))//-1
+console.group("Math.min()");
+console.log(Math.max(3, 5, 8, 9, -1)); //-1
+console.log(Math.max(NaN, 5, 8, 9, -1)); //NaN
+console.log(Math.max(3, 5, 8, 9, -1, "hello")); //NaN
+console.log(Math.max(3, 5, 8, 9, -1, 200, true, false, null)); //-1
 console.groupEnd();
 
 //Math.random()
@@ -360,27 +359,56 @@ console.log(Math.random); // посмотреть  на сайте MDM прим�
 
 //Задача
 let users = [
-  { id:1, name: 'Vlad'},
-  { id:2, name: 'Anna'},
-  { id:3, name: 'Sveta'},
-  { id:4, name: 'Tema'},
-  { id:5, name: 'Vlad'},
-  { id:6, name: 'Dima'},
-  { id:7, name: 'Tanya'},
-]
+  { id: 1, name: "Vlad" },
+  { id: 2, name: "Anna" },
+  { id: 3, name: "Sveta" },
+  { id: 4, name: "Tema" },
+  { id: 5, name: "Vlad" },
+  { id: 6, name: "Dima" },
+  { id: 7, name: "Tanya" },
+];
 
-function removeDuplicates(userList){
-  const newUserList = [];
-  for (let i = 0; i < userList.length; i++){
-    if (userList[i][j]!== userList[i][j])
-    newUserList.push(userList[i])
-  }
+console.log(users[0].name);
 
- return newUserList
-}
+// function removeDuplicates(userList){
+//   const newUserList = [];
+//   for (let i = 0; i < userList.length; i++){
+//     if (userList[i][j]!== userList[i][j])
+//     newUserList.push(userList[i])
+//   }
+
+//  return newUserList
+// }
 
 // const newUserList
 
-console.log()
-
 // собрать новый массив, убрать повторяющиеся
+
+function removeDuplicateUsers(arr) {
+  let uniqueNames = [];
+  let filteredUsers = arr.filter((user) => {
+    if (!uniqueNames.includes(user.name)) {
+      uniqueNames.push(user.name);
+      return true;
+    }
+    return false;
+  });
+  return filteredUsers;
+}
+
+let filteredUsers = removeDuplicateUsers(users);
+console.log(filteredUsers);
+
+function removeDuplicateUsers2(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i].name === arr[j].name) {
+        arr.splice(j, 1);
+      }
+    }
+  }
+  return arr;
+}
+
+let filteredUsers2 = removeDuplicateUsers2(users);
+console.log(filteredUsers2);
