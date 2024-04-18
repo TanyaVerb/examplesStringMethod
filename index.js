@@ -412,3 +412,17 @@ function removeDuplicateUsers2(arr) {
 
 let filteredUsers2 = removeDuplicateUsers2(users);
 console.log(filteredUsers2);
+
+function removeDuplicateUsers3(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (Object.is(arr[i].name, arr[j].name)) {
+        arr.splice(j, 1);
+      }
+    }
+  }
+  return arr;
+}
+
+let filteredUsers3 = removeDuplicateUsers3(users);
+console.log(filteredUsers3);
